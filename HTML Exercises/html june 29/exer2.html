@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Sample2</title>
+</head>
+<body>
+<Script language="Javascript">
+var a= prompt("Please input a Number ","");
+var b= prompt("Please input a Number ","");
+var c= prompt("Please input a Number ","");
+ 
+a=a*1.0;
+b=b*1.0;
+c=c*1.0;
+
+if ((a>b) && (a>c ))
+	
+	{if (b>c)
+		document.write( c + " " + b + " " + a);
+	else if (c>b)
+		document.write( b + " " + c + " " + a);
+	else
+		document.write( b + " " + c + " " + a);
+	}	
+
+if ((b>a) && (b>c)) 
+	{if (a>c)
+		document.write( b + " " + a + " " + c);
+	else if (c>a)
+		document.write( a + " " + c + " " + b);
+	else 
+		document.write( a + " " + c + " " + b);
+	}
+
+if ((c>b) && (c>a)) 
+	{if (b>a)
+		document.write( a + " " + b + " " + c);
+	else if (a>b)
+		document.write( b + " " + a + " " + c);
+	else	
+		document.write( b + " " + a + " " + c);
+	}
+else
+	document.write( a + " " + b + " " + c );
+</script>
+
+</body>
+</html>

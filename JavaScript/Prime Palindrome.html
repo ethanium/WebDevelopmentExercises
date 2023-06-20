@@ -1,0 +1,116 @@
+<HTML>
+<HEAD >
+<TITLE>Prime Palindrome</TITLE>
+<SCRIPT language ="Javascript" >
+
+function prime(n)
+{
+var x=0;
+var c=0;
+for(x=1;x<=n;x++)
+{
+	if((n%x)==0)
+	{
+		c++;
+	}
+}
+if(c<3)
+	return n;
+}
+
+/*
+
+ok yung function prime
+paki-debug na lang 'tong palindrome
+hindi na kaya pag 13 pataas - O¥O™
+
+*/
+
+function palindrome(n)
+{
+var m = "";
+var l=0;
+l=l*1;
+n = n.toString();
+m = m.toString();
+
+for(l=n.length;l>0;l--)
+	m = m + n.charAt(l-1);
+
+n = n.toString();
+m = m.toString();
+
+if(n.match(m))
+{
+	return n;
+}
+}
+
+
+</SCRIPT>
+</HEAD>
+<BODY>
+<SCRIPT language ="Javascript" >
+
+
+
+document.fgColor="blue";
+alert("This script will find all prime palindromes between two numbers.");
+
+var a=1;
+var b=1;
+var c=1;
+var all = new Array();
+var p = new Array();
+var pp = new Array();
+var temp;
+
+do
+{
+	if((isNaN(a)+isNaN(b))>0)
+		alert('Please input numeric values.');
+	if(a<=0||b<=0)
+		alert('Please input positive values.');
+	if(a>b)
+		alert('The second number must be greater than the first number.');
+	a=prompt("Input first number:",'');
+	a=parseFloat(a);
+	c=a;
+	b=prompt("Input second number:",'');
+	b=parseFloat(b);
+}
+while(((isNaN(a)+isNaN(b))>0)||(a<=0||b<=0)||(a>b));
+
+for(;a<=b;a++)
+{
+	all.push(a);
+}
+while(all.length>0)
+{
+	temp=prime(all.pop());
+	if (temp!=undefined)
+		p.push(temp);
+}
+
+
+while(p.length>0)
+{
+	temp=palindrome(p.pop());
+	if (temp!=undefined)
+		pp.push(temp);
+}
+
+pp=pp.reverse();
+
+document.write("<br>The prime palindrome(s) between " +c+ " and " +b+ " is/are:");
+
+while(pp.length>0)
+{
+	document.write("<br>" + pp.pop());
+}
+
+
+
+</SCRIPT>
+</BODY>
+</html>

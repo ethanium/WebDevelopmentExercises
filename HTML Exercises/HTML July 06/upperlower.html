@@ -1,0 +1,47 @@
+<html>
+
+<head>
+<SCRIPT language="Javascript">
+function mkarr (n)
+{
+	this.lenght=n
+	return this
+}
+</Script>
+</head>
+
+<title>
+</title>
+
+<body>
+<SCRIPT language="Javascript">
+var a
+var totallower
+var totalupper
+totalupper=totalupper*1
+totallower=totallower*1
+a=a*1
+totalupper=0
+totallower=0
+a=prompt("How many characters:","")
+var m= new mkarr(99)
+
+for (x=0;x<a;x++)
+{
+	m[x]=prompt("Input a Letter:","")
+	document.write(m[x])
+	if (m[x]==m[x].toUpperCase())
+		totalupper++;
+	else
+		totallower++;
+}
+
+document.write("<br>")
+document.write("Upper Case ="+totalupper);
+document.write("<br>")
+document.write("Lower Case ="+totallower);
+</SCRIPT>
+
+</body>
+
+</html>

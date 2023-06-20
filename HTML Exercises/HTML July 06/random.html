@@ -1,0 +1,21 @@
+<html>		
+<head></head>
+<body>
+<script language = "Javascript">
+
+var y;
+y=Math.floor(Math.random()*10)+1;
+
+
+var x = prompt("Enter a number(1-10):","");
+x=x*1.0;
+
+if (x==y)
+	document.write("Your guess is right! ");
+else 	
+	document.write("Sorry, your guess is not right. Press F5 to try again. ");
+document.write("<br> Computer random = " + (y));
+document.write("<br> Your number = " + (x));
+</script>
+</body>
+</html>

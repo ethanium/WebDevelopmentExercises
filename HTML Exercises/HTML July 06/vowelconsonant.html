@@ -1,0 +1,58 @@
+<html>
+<head>
+
+<SCRIPT language="Javascript">
+function mkarr (n)
+{
+	this.lenght=n
+	return this
+}
+</Script>
+
+</head>
+<title>
+Upper Case
+</title>
+<body>
+<SCRIPT language="Javascript">
+var n
+var k
+var l
+l=l*1
+k=k*1
+n=n*1
+l=0
+k=0
+n=prompt("How many characters:","")
+var m= new mkarr(10)
+
+for (x=0;x<n;x++)
+{
+	m[x]=prompt("Input a Letter:","")
+	document.write(m[x])
+	switch (m[x])
+	{
+		case "a": k++; break;
+		case "A": k++; break;
+		case "e": k++; break;
+		case "E": k++; break;
+		case "i": k++; break;
+		case "I": k++; break;
+		case "o": k++; break;
+		case "O": k++; break;
+		case "u": k++; break;
+		case "U": k++; break;
+		default: l++; break;
+	}
+}
+
+
+document.write("<br>")
+document.write("Consonants ="+l);
+document.write("<br>")
+document.write("Vowels ="+k);
+</SCRIPT>
+
+</body>
+
+</html>

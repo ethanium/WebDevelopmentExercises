@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Sample2</title>
+</head>
+<body>
+<Script language="Javascript">
+var a= prompt("Please input 1st side ","");
+var b= prompt("Please input 2nd side ","");
+var c= prompt("Please input 3rd side ","");
+ 
+a=a*1.0;
+b=b*1.0;
+c=c*1.0;
+
+if ((a==b)&&(b==c))
+		document.write("The triangle is equilateral.");
+else
+		document.write("The triangle is scalene.");
+
+if (((a==b)&&(b!=c))||((a!=b)&&(b==c))||((a==c)&&(b!=c)))
+		document.write("The triangle is isosceles.");
+	
+</script>
+
+</body>
+</html>

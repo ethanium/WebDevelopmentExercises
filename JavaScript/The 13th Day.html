@@ -1,0 +1,146 @@
+<HTML>
+<HEAD >
+<TITLE>The 13th</TITLE>
+</HEAD>
+<BODY>
+<SCRIPT language ="Javascript" >
+
+alert('This script will compute the frequency that the 13th day of each month lands on Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.');
+
+var d=0;
+var m=1;
+var y=1900;
+var nd=0;
+var nm=0;
+var ny=prompt('Input number of years:','');
+ny=ny*1;
+
+var day = new Array(0,0,0,0,0,0,0);
+var dayname = new Array('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday');
+var i=-1;
+
+
+for(;y<(1900+ny);)
+{
+	d++;
+	i++;
+	if(i==7)
+	{
+		i=0;
+	}
+	if(d==13)
+	{
+		day[i]++;
+	}
+	switch (m)
+	{
+	case 1 :
+		if(d>31)
+		{
+			d=1;
+			m=2;
+		}
+		break;
+	case 2 :
+		if((y%4==0)&&(d>29))
+		{
+			d=1;
+			m=3;
+			nd+=366;
+		}
+		if((y%4>0)&&(d>28))
+		{
+			d=1;
+			m=3;
+			nd+=365;
+		}
+		break;
+	case 3 :
+		if(d>31)
+		{
+			d=1;
+			m=4;
+		}
+		break;
+	case 4 :
+		if(d>30)
+		{
+			d=1;
+			m=5;
+		}
+		break;
+	case 5 :
+		if(d>31)
+		{
+			d=1;
+			m=6;
+		}
+		break;
+		break;
+	case 6 :
+		if(d>30)
+		{
+			d=1;
+			m=7;
+		}
+		break;
+	case 7 :
+		if(d>31)
+		{
+			d=1;
+			m=8;
+		}
+		break;
+	case 8 :
+		if(d>31)
+		{
+			d=1;
+			m=9;
+		}
+		break;
+	case 9 :
+		if(d>30)
+		{
+			d=1;
+			m=10;
+		}
+		break;
+	case 10:
+		if(d>31)
+		{
+			d=1;
+			m=11;
+		}
+		break;
+	case 11:
+		if(d>30)
+		{
+			d=1;
+			m=12;
+		}
+		break;
+	case 12:
+		if(d>31)
+		{
+			d=1;
+			m=1;
+			y++;
+			nm+=12;
+		}
+		break;
+	}
+}
+
+
+document.write('<BR>Number of years: ' + ny);
+document.write('<BR>From January 1, 1900 to December 31, ' + y + '<BR>');
+for(i=0;i<7;i++)
+{
+	document.write('<BR>' + dayname[i]+': '+ day[i]);
+}
+
+
+
+</SCRIPT>
+</BODY>
+</html>

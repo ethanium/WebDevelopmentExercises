@@ -1,0 +1,33 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<Script language="Javascript">
+ var b,c;
+ var a= prompt("Input an integer:","") ;
+
+ b=1.0;c=0.0;
+ a=a*1.0; b=b*1.0;c=c*1.0;
+ 
+
+if (a<0.0)
+	{alert ("Sorry, the input value must be positive.");
+	a= prompt("Input an integer:","") ;
+	while (b<=a)
+		{
+		 c= c+b;
+		b++;
+		}
+	document.write("Sum = " + c);
+	}
+else
+	{while (b<=a)
+		{c= c+b;b++;
+		}
+	document.write ("Sum = " + c);
+}
+</script>
+
+</body>
+</html>

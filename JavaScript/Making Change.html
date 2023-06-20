@@ -1,0 +1,42 @@
+<HTML>
+<HEAD >
+<TITLE>Making Change</TITLE>
+</HEAD>
+<BODY>
+<SCRIPT language ="Javascript" >
+
+alert("This script will compute how many ways to make change for a given amount of money.\nThe money system consists of the coins A,B,C and D where:\n5A = 1B\n2B = 1C\n2C = 1D");
+
+var a=prompt("Enter an amount in A:","");
+var b=0;
+var c=0;
+var d=0;
+var n=1;
+var s =",";
+
+document.write("<br>#:  A,B,C,D<br>");
+document.write("<br>"+(n++)+": "+a+s+b+s+c+s+d);
+
+while(a>4)
+{
+	a=a-5;
+	b=b+1;
+	document.write("<br>"+(n++)+": "+a+s+b+s+c+s+d);
+	while(b>1)
+	{
+		b=b-2;
+		c=c+1;
+		document.write("<br>"+(n++)+": "+a+s+b+s+c+s+d);
+		while(c>1)
+		{
+			c=c-2;
+			d=d+1;
+			document.write("<br>"+(n++)+": "+a+s+b+s+c+s+d);
+		}
+	}
+}
+
+
+</SCRIPT>
+</BODY>
+</html>
